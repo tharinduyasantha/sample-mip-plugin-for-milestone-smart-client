@@ -1,0 +1,204 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7031B1A6-6049-43BB-9123-6259687927DD}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MIPPlugin1</RootNamespace>
+    <AssemblyName>MIPPlugin1</AssemblyName>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+    <PackageReference Include="Microsoft.Web.WebView2">
+      <Version>1.0.2420.47</Version>
+    </PackageReference>
+    <PackageReference Include="MilestoneSystems.VideoOS.Platform" Version="*" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admin\MIPPlugin1AddUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Admin\MIPPlugin1AddUserControl.Designer.cs">
+      <DependentUpon>MIPPlugin1AddUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\MIPPlugin1HelpPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Admin\MIPPlugin1HelpPage.Designer.cs">
+      <DependentUpon>MIPPlugin1HelpPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\MIPPlugin1ItemManager.cs" />
+    <Compile Include="Admin\MIPPlugin1TabPlugin.cs" />
+    <Compile Include="Admin\MIPPlugin1TabUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Admin\MIPPlugin1TabUserControl.Designer.cs">
+      <DependentUpon>MIPPlugin1TabUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\MIPPlugin1ToolsOptionDialogPlugin.cs" />
+    <Compile Include="Admin\MIPPlugin1ToolsOptionDialogUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Admin\MIPPlugin1ToolsOptionDialogUserControl.designer.cs">
+      <DependentUpon>MIPPlugin1ToolsOptionDialogUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\MIPPlugin1UserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Admin\MIPPlugin1UserControl.Designer.cs">
+      <DependentUpon>MIPPlugin1UserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Background\MIPPlugin1BackgroundPlugin.cs" />
+    <Compile Include="Client\MIPPlugin1PropertiesWpfUserControl.xaml.cs">
+      <DependentUpon>MIPPlugin1PropertiesWpfUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Client\MIPPlugin1SettingsPanelPlugin.cs" />
+    <Compile Include="Client\MIPPlugin1SettingsPanelControl.xaml.cs">
+      <DependentUpon>MIPPlugin1SettingsPanelControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Client\MIPPlugin1SidePanelPlugin.cs" />
+    <Compile Include="Client\MIPPlugin1SidePanelWpfUserControl.xaml.cs">
+      <DependentUpon>MIPPlugin1SidePanelWpfUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Client\MIPPlugin1ViewItemPlugin.cs" />
+    <Compile Include="Client\MIPPlugin1ViewItemManager.cs" />
+    <Compile Include="Client\MIPPlugin1ViewItemToolbarPlugin.cs" />
+    <Compile Include="Client\MIPPlugin1ViewItemWpfUserControl.xaml.cs">
+      <DependentUpon>MIPPlugin1ViewItemWpfUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Client\MIPPlugin1ViewLayout.cs" />
+    <Compile Include="Client\MainViewPlugin.cs" />
+    <Compile Include="Client\MainViewSprinxTab.cs" />
+    <Compile Include="Client\MIPPlugin1WorkSpaceViewItemManager.cs" />
+    <Compile Include="Client\MIPPlugin1WorkSpaceViewItemPlugin.cs" />
+    <Compile Include="Client\MIPPlugin1WorkSpaceViewItemWpfUserControl.xaml.cs">
+      <DependentUpon>MIPPlugin1WorkSpaceViewItemWpfUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="MIPPlugin1Definition.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Admin\MIPPlugin1AddUserControl.resx">
+      <DependentUpon>MIPPlugin1AddUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Admin\MIPPlugin1TabUserControl.resx">
+      <DependentUpon>MIPPlugin1TabUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\MIPPlugin1ToolsOptionDialogUserControl.resx">
+      <DependentUpon>MIPPlugin1ToolsOptionDialogUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Server.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Admin\MIPPlugin1HelpPage.resx">
+      <DependentUpon>MIPPlugin1HelpPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\MIPPlugin1UserControl.resx">
+      <DependentUpon>MIPPlugin1UserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="plugin.def">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <EmbeddedResource Include="Resources\DummyItem.bmp" />
+    <EmbeddedResource Include="Resources\WorkSpaceIcon.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Client\MIPPlugin1PropertiesWpfUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Client\MIPPlugin1SettingsPanelControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Client\MIPPlugin1SidePanelWpfUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Client\MIPPlugin1ViewItemWpfUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Client\MIPPlugin1WorkSpaceViewItemWpfUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+  </PropertyGroup>
+</Project>
