@@ -71,6 +71,12 @@ namespace MIPPlugin1.Client
             return new MIPPlugin1ViewItemManager();
         }
 
+        public override bool HideSetupItem
+        {
+            get
+            {
+                return true;
+            }
+        }
     }
-
 }

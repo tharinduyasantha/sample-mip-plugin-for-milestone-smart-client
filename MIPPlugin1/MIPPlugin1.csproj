@@ -114,7 +114,7 @@
     <Compile Include="Client\UserControls\MIPPlugin1ViewItemWpfUserControl.xaml.cs">
       <DependentUpon>MIPPlugin1ViewItemWpfUserControl.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Client\MIPPlugin1ViewLayout.cs" />
+    <Compile Include="Client\Views\MIPPlugin1ViewLayout.cs" />
     <Compile Include="Client\Plugins\MainViewPlugin.cs" />
     <Compile Include="Client\Plugins\MainViewTab.cs" />
     <Compile Include="Client\Services\MIPPlugin1WorkSpaceViewItemManager.cs" />
@@ -188,7 +188,6 @@
   <ItemGroup>
     <Folder Include="Client\Models\" />
     <Folder Include="Client\ViewModels\" />
-    <Folder Include="Client\Views\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -35,7 +35,7 @@ namespace MIPPlugin1.Client
         {
             get
             {
-                return false;
+                return true;
             }
         }
 
