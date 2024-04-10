@@ -26,7 +26,8 @@
 mono_crash.*
 
 # Build results
-MIPPlugin1/bin/Debug/
+MIPPlugin1/bin/
+MIPPlugin1/obj/
 [Dd]ebugPublic/
 [Rr]elease/
 [Rr]eleases/
