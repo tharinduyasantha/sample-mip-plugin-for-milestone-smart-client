@@ -100,25 +100,25 @@
     <Compile Include="Client\UserControls\MIPPlugin1PropertiesWpfUserControl.xaml.cs">
       <DependentUpon>MIPPlugin1PropertiesWpfUserControl.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Client\MIPPlugin1SettingsPanelPlugin.cs" />
+    <Compile Include="Client\Plugins\MIPPlugin1SettingsPanelPlugin.cs" />
     <Compile Include="Client\UserControls\MIPPlugin1SettingsPanelControl.xaml.cs">
       <DependentUpon>MIPPlugin1SettingsPanelControl.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Client\MIPPlugin1SidePanelPlugin.cs" />
+    <Compile Include="Client\Plugins\MIPPlugin1SidePanelPlugin.cs" />
     <Compile Include="Client\UserControls\MIPPlugin1SidePanelWpfUserControl.xaml.cs">
       <DependentUpon>MIPPlugin1SidePanelWpfUserControl.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Client\MIPPlugin1WebViewItemPlugin.cs" />
-    <Compile Include="Client\MIPPlugin1ViewItemManager.cs" />
-    <Compile Include="Client\MIPPlugin1ViewItemToolbarPlugin.cs" />
+    <Compile Include="Client\Plugins\MIPPlugin1WebViewItemPlugin.cs" />
+    <Compile Include="Client\Services\MIPPlugin1ViewItemManager.cs" />
+    <Compile Include="Client\Plugins\MIPPlugin1ViewItemToolbarPlugin.cs" />
     <Compile Include="Client\UserControls\MIPPlugin1ViewItemWpfUserControl.xaml.cs">
       <DependentUpon>MIPPlugin1ViewItemWpfUserControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="Client\MIPPlugin1ViewLayout.cs" />
-    <Compile Include="Client\MainViewPlugin.cs" />
-    <Compile Include="Client\MainViewTab.cs" />
-    <Compile Include="Client\MIPPlugin1WorkSpaceViewItemManager.cs" />
-    <Compile Include="Client\MIPPlugin1WorkSpaceViewItemPlugin.cs" />
+    <Compile Include="Client\Plugins\MainViewPlugin.cs" />
+    <Compile Include="Client\Plugins\MainViewTab.cs" />
+    <Compile Include="Client\Services\MIPPlugin1WorkSpaceViewItemManager.cs" />
+    <Compile Include="Client\Plugins\MIPPlugin1WorkSpaceViewItemPlugin.cs" />
     <Compile Include="Client\UserControls\MIPPlugin1WorkSpaceViewItemWpfUserControl.xaml.cs">
       <DependentUpon>MIPPlugin1WorkSpaceViewItemWpfUserControl.xaml</DependentUpon>
     </Compile>
@@ -187,7 +187,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Client\Models\" />
-    <Folder Include="Client\Services\" />
     <Folder Include="Client\ViewModels\" />
     <Folder Include="Client\Views\" />
   </ItemGroup>
