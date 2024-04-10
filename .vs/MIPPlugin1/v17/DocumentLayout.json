@@ -1,49 +1,10 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\Spinx\\MIP Plugin\\MIPPluginV1\\MIPPlugin1\\",
+  "WorkspaceRootPath": "D:\\Spinx\\MIP Plugin\\MIPPluginV1\\MIPPlugin1\\sample-mip-plugin-for-milestone-smart-client\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7031B1A6-6049-43BB-9123-6259687927DD}|MIPPlugin1\\MIPPlugin1.csproj|d:\\spinx\\mip plugin\\mippluginv1\\mipplugin1\\mipplugin1\\client\\mipplugin1viewitemtoolbarplugin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7031B1A6-6049-43BB-9123-6259687927DD}|MIPPlugin1\\MIPPlugin1.csproj|solutionrelative:mipplugin1\\client\\mipplugin1viewitemtoolbarplugin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7031B1A6-6049-43BB-9123-6259687927DD}|MIPPlugin1\\MIPPlugin1.csproj|d:\\spinx\\mip plugin\\mippluginv1\\mipplugin1\\mipplugin1\\mipplugin1definition.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{7031B1A6-6049-43BB-9123-6259687927DD}|MIPPlugin1\\MIPPlugin1.csproj|d:\\spinx\\mip plugin\\mippluginv1\\mipplugin1\\sample-mip-plugin-for-milestone-smart-client\\mipplugin1\\mipplugin1definition.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7031B1A6-6049-43BB-9123-6259687927DD}|MIPPlugin1\\MIPPlugin1.csproj|solutionrelative:mipplugin1\\mipplugin1definition.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7031B1A6-6049-43BB-9123-6259687927DD}|MIPPlugin1\\MIPPlugin1.csproj|d:\\spinx\\mip plugin\\mippluginv1\\mipplugin1\\mipplugin1\\client\\mipplugin1settingspanelplugin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7031B1A6-6049-43BB-9123-6259687927DD}|MIPPlugin1\\MIPPlugin1.csproj|solutionrelative:mipplugin1\\client\\mipplugin1settingspanelplugin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7031B1A6-6049-43BB-9123-6259687927DD}|MIPPlugin1\\MIPPlugin1.csproj|d:\\spinx\\mip plugin\\mippluginv1\\mipplugin1\\mipplugin1\\client\\mainviewplugin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7031B1A6-6049-43BB-9123-6259687927DD}|MIPPlugin1\\MIPPlugin1.csproj|solutionrelative:mipplugin1\\client\\mainviewplugin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7031B1A6-6049-43BB-9123-6259687927DD}|MIPPlugin1\\MIPPlugin1.csproj|D:\\Spinx\\MIP Plugin\\MIPPluginV1\\MIPPlugin1\\mipplugin1\\client\\mipplugin1viewitemwpfusercontrol.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{7031B1A6-6049-43BB-9123-6259687927DD}|MIPPlugin1\\MIPPlugin1.csproj|solutionrelative:mipplugin1\\client\\mipplugin1viewitemwpfusercontrol.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7031B1A6-6049-43BB-9123-6259687927DD}|MIPPlugin1\\MIPPlugin1.csproj|D:\\Spinx\\MIP Plugin\\MIPPluginV1\\MIPPlugin1\\mipplugin1\\client\\mainviewsprinxtab.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7031B1A6-6049-43BB-9123-6259687927DD}|MIPPlugin1\\MIPPlugin1.csproj|solutionrelative:mipplugin1\\client\\mainviewsprinxtab.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7031B1A6-6049-43BB-9123-6259687927DD}|MIPPlugin1\\MIPPlugin1.csproj|D:\\Spinx\\MIP Plugin\\MIPPluginV1\\MIPPlugin1\\mipplugin1\\client\\mipplugin1settingspanelcontrol.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7031B1A6-6049-43BB-9123-6259687927DD}|MIPPlugin1\\MIPPlugin1.csproj|solutionrelative:mipplugin1\\client\\mipplugin1settingspanelcontrol.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7031B1A6-6049-43BB-9123-6259687927DD}|MIPPlugin1\\MIPPlugin1.csproj|D:\\Spinx\\MIP Plugin\\MIPPluginV1\\MIPPlugin1\\mipplugin1\\client\\mipplugin1viewitemwpfusercontrol.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7031B1A6-6049-43BB-9123-6259687927DD}|MIPPlugin1\\MIPPlugin1.csproj|solutionrelative:mipplugin1\\client\\mipplugin1viewitemwpfusercontrol.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7031B1A6-6049-43BB-9123-6259687927DD}|MIPPlugin1\\MIPPlugin1.csproj|D:\\Spinx\\MIP Plugin\\MIPPluginV1\\MIPPlugin1\\mipplugin1\\client\\mipplugin1sidepanelwpfusercontrol.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{7031B1A6-6049-43BB-9123-6259687927DD}|MIPPlugin1\\MIPPlugin1.csproj|solutionrelative:mipplugin1\\client\\mipplugin1sidepanelwpfusercontrol.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7031B1A6-6049-43BB-9123-6259687927DD}|MIPPlugin1\\MIPPlugin1.csproj|D:\\Spinx\\MIP Plugin\\MIPPluginV1\\MIPPlugin1\\mipplugin1\\client\\mipplugin1propertieswpfusercontrol.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{7031B1A6-6049-43BB-9123-6259687927DD}|MIPPlugin1\\MIPPlugin1.csproj|solutionrelative:mipplugin1\\client\\mipplugin1propertieswpfusercontrol.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{00000000-0000-0000-0000-000000000000}|\u003CSolution\u003E|MIPPlugin1||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
     }
   ],
   "DocumentGroupContainers": [
@@ -62,134 +23,15 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "MIPPlugin1ViewItemToolbarPlugin.cs",
-              "DocumentMoniker": "D:\\Spinx\\MIP Plugin\\MIPPluginV1\\MIPPlugin1\\MIPPlugin1\\Client\\MIPPlugin1ViewItemToolbarPlugin.cs",
-              "RelativeDocumentMoniker": "MIPPlugin1\\Client\\MIPPlugin1ViewItemToolbarPlugin.cs",
-              "ToolTip": "D:\\Spinx\\MIP Plugin\\MIPPluginV1\\MIPPlugin1\\MIPPlugin1\\Client\\MIPPlugin1ViewItemToolbarPlugin.cs*",
-              "RelativeToolTip": "MIPPlugin1\\Client\\MIPPlugin1ViewItemToolbarPlugin.cs*",
-              "ViewState": "AQIAAB8AAAAAAAAAAAA5wDcAAAANAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-08T09:01:16.979Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "MIPPlugin1SettingsPanelPlugin.cs",
-              "DocumentMoniker": "D:\\Spinx\\MIP Plugin\\MIPPluginV1\\MIPPlugin1\\MIPPlugin1\\Client\\MIPPlugin1SettingsPanelPlugin.cs",
-              "RelativeDocumentMoniker": "MIPPlugin1\\Client\\MIPPlugin1SettingsPanelPlugin.cs",
-              "ToolTip": "D:\\Spinx\\MIP Plugin\\MIPPluginV1\\MIPPlugin1\\MIPPlugin1\\Client\\MIPPlugin1SettingsPanelPlugin.cs",
-              "RelativeToolTip": "MIPPlugin1\\Client\\MIPPlugin1SettingsPanelPlugin.cs",
-              "ViewState": "AQIAADAAAAAAAAAAAAAowAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-08T09:00:52.913Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
               "Title": "MIPPlugin1Definition.cs",
-              "DocumentMoniker": "D:\\Spinx\\MIP Plugin\\MIPPluginV1\\MIPPlugin1\\MIPPlugin1\\MIPPlugin1Definition.cs",
+              "DocumentMoniker": "D:\\Spinx\\MIP Plugin\\MIPPluginV1\\MIPPlugin1\\sample-mip-plugin-for-milestone-smart-client\\MIPPlugin1\\MIPPlugin1Definition.cs",
               "RelativeDocumentMoniker": "MIPPlugin1\\MIPPlugin1Definition.cs",
-              "ToolTip": "D:\\Spinx\\MIP Plugin\\MIPPluginV1\\MIPPlugin1\\MIPPlugin1\\MIPPlugin1Definition.cs",
+              "ToolTip": "D:\\Spinx\\MIP Plugin\\MIPPluginV1\\MIPPlugin1\\sample-mip-plugin-for-milestone-smart-client\\MIPPlugin1\\MIPPlugin1Definition.cs",
               "RelativeToolTip": "MIPPlugin1\\MIPPlugin1Definition.cs",
-              "ViewState": "AQIAAGIAAAAAAAAAAAAgwG8AAABRAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-08T09:00:40.347Z",
+              "WhenOpened": "2024-04-10T07:36:08.445Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "MIPPlugin1ViewItemWpfUserControl.xaml",
-              "DocumentMoniker": "D:\\Spinx\\MIP Plugin\\MIPPluginV1\\MIPPlugin1\\MIPPlugin1\\Client\\MIPPlugin1ViewItemWpfUserControl.xaml",
-              "RelativeDocumentMoniker": "MIPPlugin1\\Client\\MIPPlugin1ViewItemWpfUserControl.xaml",
-              "ToolTip": "D:\\Spinx\\MIP Plugin\\MIPPluginV1\\MIPPlugin1\\MIPPlugin1\\Client\\MIPPlugin1ViewItemWpfUserControl.xaml",
-              "RelativeToolTip": "MIPPlugin1\\Client\\MIPPlugin1ViewItemWpfUserControl.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-04-06T20:33:38.348Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "MIPPlugin1SettingsPanelControl.xaml.cs",
-              "DocumentMoniker": "D:\\Spinx\\MIP Plugin\\MIPPluginV1\\MIPPlugin1\\MIPPlugin1\\Client\\MIPPlugin1SettingsPanelControl.xaml.cs",
-              "RelativeDocumentMoniker": "MIPPlugin1\\Client\\MIPPlugin1SettingsPanelControl.xaml.cs",
-              "ToolTip": "D:\\Spinx\\MIP Plugin\\MIPPluginV1\\MIPPlugin1\\MIPPlugin1\\Client\\MIPPlugin1SettingsPanelControl.xaml.cs",
-              "RelativeToolTip": "MIPPlugin1\\Client\\MIPPlugin1SettingsPanelControl.xaml.cs",
-              "ViewState": "AQIAAA0AAAAAAAAAAAAQwBEAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-06T19:39:08.192Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "MainViewPlugin.cs",
-              "DocumentMoniker": "D:\\Spinx\\MIP Plugin\\MIPPluginV1\\MIPPlugin1\\MIPPlugin1\\Client\\MainViewPlugin.cs",
-              "RelativeDocumentMoniker": "MIPPlugin1\\Client\\MainViewPlugin.cs",
-              "ToolTip": "D:\\Spinx\\MIP Plugin\\MIPPluginV1\\MIPPlugin1\\MIPPlugin1\\Client\\MainViewPlugin.cs",
-              "RelativeToolTip": "MIPPlugin1\\Client\\MainViewPlugin.cs",
-              "ViewState": "AQIAACsAAAAAAAAAAADwvzgAAAA8AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-06T11:43:03.535Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "MainViewSprinxTab.cs",
-              "DocumentMoniker": "D:\\Spinx\\MIP Plugin\\MIPPluginV1\\MIPPlugin1\\MIPPlugin1\\Client\\MainViewSprinxTab.cs",
-              "RelativeDocumentMoniker": "MIPPlugin1\\Client\\MainViewSprinxTab.cs",
-              "ToolTip": "D:\\Spinx\\MIP Plugin\\MIPPluginV1\\MIPPlugin1\\MIPPlugin1\\Client\\MainViewSprinxTab.cs",
-              "RelativeToolTip": "MIPPlugin1\\Client\\MainViewSprinxTab.cs",
-              "ViewState": "AQIAAC4AAAAAAAAAAADwvwsAAAA5AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-06T19:58:29.47Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "MIPPlugin1ViewItemWpfUserControl.xaml.cs",
-              "DocumentMoniker": "D:\\Spinx\\MIP Plugin\\MIPPluginV1\\MIPPlugin1\\MIPPlugin1\\Client\\MIPPlugin1ViewItemWpfUserControl.xaml.cs",
-              "RelativeDocumentMoniker": "MIPPlugin1\\Client\\MIPPlugin1ViewItemWpfUserControl.xaml.cs",
-              "ToolTip": "D:\\Spinx\\MIP Plugin\\MIPPluginV1\\MIPPlugin1\\MIPPlugin1\\Client\\MIPPlugin1ViewItemWpfUserControl.xaml.cs",
-              "RelativeToolTip": "MIPPlugin1\\Client\\MIPPlugin1ViewItemWpfUserControl.xaml.cs",
-              "ViewState": "AQIAADgAAAAAAAAAAAAswDIAAAAkAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-06T20:33:31.687Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "MIPPlugin1SidePanelWpfUserControl.xaml",
-              "DocumentMoniker": "D:\\Spinx\\MIP Plugin\\MIPPluginV1\\MIPPlugin1\\MIPPlugin1\\Client\\MIPPlugin1SidePanelWpfUserControl.xaml",
-              "RelativeDocumentMoniker": "MIPPlugin1\\Client\\MIPPlugin1SidePanelWpfUserControl.xaml",
-              "ToolTip": "D:\\Spinx\\MIP Plugin\\MIPPluginV1\\MIPPlugin1\\MIPPlugin1\\Client\\MIPPlugin1SidePanelWpfUserControl.xaml",
-              "RelativeToolTip": "MIPPlugin1\\Client\\MIPPlugin1SidePanelWpfUserControl.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-04-06T20:34:21.302Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "MIPPlugin1PropertiesWpfUserControl.xaml",
-              "DocumentMoniker": "D:\\Spinx\\MIP Plugin\\MIPPluginV1\\MIPPlugin1\\MIPPlugin1\\Client\\MIPPlugin1PropertiesWpfUserControl.xaml",
-              "RelativeDocumentMoniker": "MIPPlugin1\\Client\\MIPPlugin1PropertiesWpfUserControl.xaml",
-              "ToolTip": "D:\\Spinx\\MIP Plugin\\MIPPluginV1\\MIPPlugin1\\MIPPlugin1\\Client\\MIPPlugin1PropertiesWpfUserControl.xaml",
-              "RelativeToolTip": "MIPPlugin1\\Client\\MIPPlugin1PropertiesWpfUserControl.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-04-06T20:34:07.76Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "MIPPlugin1",
-              "DocumentMoniker": "D:\\Spinx\\MIP Plugin\\MIPPluginV1\\MIPPlugin1\\MIPPlugin1\\MIPPlugin1.csproj",
-              "RelativeDocumentMoniker": "MIPPlugin1\\MIPPlugin1.csproj",
-              "ToolTip": "D:\\Spinx\\MIP Plugin\\MIPPluginV1\\MIPPlugin1\\MIPPlugin1\\MIPPlugin1.csproj",
-              "RelativeToolTip": "MIPPlugin1\\MIPPlugin1.csproj",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2024-04-06T20:32:39.985Z"
             }
           ]
         }

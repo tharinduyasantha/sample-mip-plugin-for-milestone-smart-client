@@ -1,4 +1,6 @@
+using Microsoft.Web.WebView2.Core;
 using System;
+using System.Windows;
 using System.Windows.Input;
 using System.Windows.Media;
 using VideoOS.Platform;
@@ -41,6 +43,24 @@ namespace MIPPlugin1.Client
             InitializeComponent();
 
             SetHeaderColors();
+            InitializeWebView();
+        }
+
+        private void InitializeWebView()
+        {
+            webView.Loaded += InitializeWebView2;
+        }
+
+        private async void InitializeWebView2(object sender, RoutedEventArgs e)
+        {
+            if (webView.CoreWebView2 == null)
+            {
+                // Initialize CoreWebView2 for the WebView2 control
+                await webView.EnsureCoreWebView2Async();
+            }
+
+            // Now you can subscribe to the WebMessageReceived event or any other event
+            webView.CoreWebView2.WebMessageReceived += UpdateTextFromReactApp;
         }
 
         private static Color GetWindowsMediaColor(System.Drawing.Color inColor)
@@ -48,9 +68,24 @@ namespace MIPPlugin1.Client
             return Color.FromArgb(inColor.A, inColor.R, inColor.G, inColor.B);
         }
 
+        private void UpdateTextFromReactApp(object sender, CoreWebView2WebMessageReceivedEventArgs args)
+        {
+            string message = args.TryGetWebMessageAsString();
+            if (!String.IsNullOrEmpty(message))
+            {
+
+                ReactMessage.Text = message;
+            }
+        }
+        private void OnWpfButtonClickAsync(object sender, RoutedEventArgs e)
+        {
+            string newText = "Changed using WPF button";
+            webView.ExecuteScriptAsync($"window.postMessage('{newText}', '*');");
+        }
+
         private void SetHeaderColors()
         {
-            _headerGrid.Background = new SolidColorBrush(GetWindowsMediaColor(ClientControl.Instance.Theme.BackgroundColor));
+            //_headerGrid.Background = new SolidColorBrush(GetWindowsMediaColor(ClientControl.Instance.Theme.BackgroundColor));
         }
 
         private void SetUpApplicationEventListeners()
@@ -78,7 +113,7 @@ namespace MIPPlugin1.Client
         public override void Init()
         {
             SetUpApplicationEventListeners();
-            _nameTextBlock.Text = _viewItemManager.SomeName;
+            //_nameTextBlock.Text = _viewItemManager.SomeName;
         }
 
         /// <summary>
@@ -146,7 +181,7 @@ namespace MIPPlugin1.Client
 
         void ViewItemManagerPropertyChangedEvent(object sender, EventArgs e)
         {
-            _nameTextBlock.Text = _viewItemManager.SomeName;
+            //_nameTextBlock.Text = _viewItemManager.SomeName;
         }
 
         private object ThemeChangedIndicationHandler(VideoOS.Platform.Messaging.Message message, FQID destination, FQID source)
@@ -191,6 +226,8 @@ namespace MIPPlugin1.Client
                 SetHeaderColors();
             }
         }
+
+        
 
         #endregion
     }

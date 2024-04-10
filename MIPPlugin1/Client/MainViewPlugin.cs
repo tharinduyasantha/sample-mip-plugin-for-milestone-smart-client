@@ -53,11 +53,14 @@ namespace MIPPlugin1.Client
             ViewAndLayoutItem.Layout = rectangles.ToArray();
             ViewAndLayoutItem.Name = Name;
 
-            Dictionary<String, String> properties2 = new Dictionary<string, string>();
-            properties2.Add("URL", "https://dragon.sprinx.ai");
-            properties2.Add("Addscript", "true");
-            properties2.Add("HideNavigationBar", "false");
-            ViewAndLayoutItem.InsertBuiltinViewItem(0, ViewAndLayoutItem.HTMLBuiltinId, properties2);
+            var myCustomViewItemPlugin = new MIPPlugin1ViewItemPlugin();
+            ViewAndLayoutItem.InsertViewItemPlugin(0, myCustomViewItemPlugin, new Dictionary<string, string>());
+
+            //Dictionary<String, String> properties2 = new Dictionary<string, string>();
+            //properties2.Add("URL", "https://dragon.sprinx.ai");
+            //properties2.Add("Addscript", "true");
+            //properties2.Add("HideNavigationBar", "false");
+            //ViewAndLayoutItem.InsertBuiltinViewItem(0, ViewAndLayoutItem.HTMLBuiltinId, properties2);
         }
 
         /// <summary>

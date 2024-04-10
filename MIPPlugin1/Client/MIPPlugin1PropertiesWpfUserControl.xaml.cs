@@ -48,13 +48,13 @@ namespace MIPPlugin1.Client
         /// <summary>
         /// Setup events and message receivers and load stored configuration.
         /// </summary>
-        public override void Init()
-        {
-            if (_viewItemManager.ConfigItems != null)
-            {
-                FillContent(_viewItemManager.ConfigItems, _viewItemManager.SomeId);
-            }
-        }
+        //public override void Init()
+        //{
+        //    if (_viewItemManager.ConfigItems != null)
+        //    {
+        //        FillContent(_viewItemManager.ConfigItems, _viewItemManager.SomeId);
+        //    }
+        //}
 
         /// <summary>
         /// Perform any cleanup stuff and event -=
@@ -91,7 +91,7 @@ namespace MIPPlugin1.Client
 
         private void comboBoxID_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            _viewItemManager.SomeId = ((ComboBoxNode)comboBoxID.SelectedItem).Item.FQID.ObjectId;
+            //_viewItemManager.SomeId = ((ComboBoxNode)comboBoxID.SelectedItem).Item.FQID.ObjectId;
         }
 
         #endregion

@@ -4,21 +4,42 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:MIPPlugin1.Client"
-             xmlns:platformclient="clr-namespace:VideoOS.Platform.Client;assembly=VideoOS.Platform"
-             mc:Ignorable="d" 
+             xmlns:platformclient="clr-namespace:VideoOS.Platform.Client;assembly=VideoOS.Platform" xmlns:wpf="clr-namespace:Microsoft.Web.WebView2.Wpf;assembly=Microsoft.Web.WebView2.Wpf"
+                                       mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300" MouseDown="ViewItemWpfUserControl_MouseDown" MouseDoubleClick="ViewItemWpfUserControl_MouseDoubleClick">
-    <Grid>
+    <Grid VerticalAlignment="Top">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <!-- Column for Button and TextBlock -->
+            <ColumnDefinition Width="*" />
+            <!-- Column for WebView2 -->
+        </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="18"/>
-            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto" />
+            <!-- Row for Button and WebView2 -->
+            <RowDefinition Height="*" />
+            <!-- Row for TextBlock -->
         </Grid.RowDefinitions>
-        <Grid Grid.Row="0" x:Name="_headerGrid">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="auto"/>
-                <ColumnDefinition Width="*"/>
-            </Grid.ColumnDefinitions>
-            <TextBlock Grid.Column="0" Margin="0,0,5,0">You are now running: </TextBlock>
-            <TextBlock Grid.Column="1" x:Name="_nameTextBlock"/>
-        </Grid>
+
+        <!-- Button in the first column of the first row -->
+        <Button
+    Grid.Column="0"
+    Content="Click me!"
+    VerticalAlignment="Center"
+    Click="OnWpfButtonClickAsync" Margin="0,0,3,0" />
+
+        <!-- WebView2 in the second column, spanning two rows -->
+        <wpf:WebView2
+    Grid.Row="1"
+    x:Name="webView"
+    Source="http://localhost:3000/" Margin="26,54,24,-220" Grid.ColumnSpan="2"/>
+
+        <!-- TextBlock in the first column of the second row -->
+        <TextBlock
+    Grid.Column="0"
+    Grid.Row="1"
+    x:Name="ReactMessage"
+    VerticalAlignment="Top" Margin="0,21,691,0" Grid.ColumnSpan="2" Height="25" Background="White" Foreground="Black"/>
     </Grid>
+
 </platformclient:ViewItemWpfUserControl>

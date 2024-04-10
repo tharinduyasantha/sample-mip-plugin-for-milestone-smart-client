@@ -27,15 +27,15 @@ namespace MIPPlugin1.Client
         /// The properties for this ViewItem is now loaded into the base class and can be accessed via 
         /// GetProperty(key) and SetProperty(key,value) methods
         /// </summary>
-        public override void PropertiesLoaded()
-        {
-            String someid = GetProperty("SelectedGUID");
-            _configItems = Configuration.Instance.GetItemConfigurations(MIPPlugin1Definition.MIPPlugin1PluginId, null, MIPPlugin1Definition.MIPPlugin1Kind);
-            if (someid != null && _configItems != null)
-            {
-                SomeId = new Guid(someid);  // Set as last selected
-            }
-        }
+        //public override void PropertiesLoaded()
+        //{
+        //    String someid = GetProperty("SelectedGUID");
+        //    _configItems = Configuration.Instance.GetItemConfigurations(MIPPlugin1Definition.MIPPlugin1PluginId, null, MIPPlugin1Definition.MIPPlugin1Kind);
+        //    if (someid != null && _configItems != null)
+        //    {
+        //        SomeId = new Guid(someid);  // Set as last selected
+        //    }
+        //}
 
         ///// <summary>
         ///// Generate the UserControl containing the actual ViewItem Content.
@@ -72,38 +72,38 @@ namespace MIPPlugin1.Client
         /// Generate the UserControl containing the property configuration.
         /// </summary>
         /// <returns></returns>
-        public override PropertiesWpfUserControl GeneratePropertiesWpfUserControl()
-        {
-            return new MIPPlugin1PropertiesWpfUserControl(this);
-        }
+        //public override PropertiesWpfUserControl GeneratePropertiesWpfUserControl()
+        //{
+        //    return new MIPPlugin1PropertiesWpfUserControl(this);
+        //}
 
         #endregion
 
-        public List<Item> ConfigItems
-        {
-            get { return _configItems; }
-        }
+        //public List<Item> ConfigItems
+        //{
+        //    get { return _configItems; }
+        //}
 
-        public Guid SomeId
-        {
-            get { return _someid; }
-            set
-            {
-                _someid = value;
-                SetProperty("SelectedGUID", _someid.ToString());
-                if (_configItems != null)
-                {
-                    foreach (Item item in _configItems)
-                    {
-                        if (item.FQID.ObjectId == _someid)
-                        {
-                            SomeName = item.Name;
-                        }
-                    }
-                }
-                SaveProperties();
-            }
-        }
+        //public Guid SomeId
+        //{
+        //    get { return _someid; }
+        //    set
+        //    {
+        //        _someid = value;
+        //        SetProperty("SelectedGUID", _someid.ToString());
+        //        if (_configItems != null)
+        //        {
+        //            foreach (Item item in _configItems)
+        //            {
+        //                if (item.FQID.ObjectId == _someid)
+        //                {
+        //                    SomeName = item.Name;
+        //                }
+        //            }
+        //        }
+        //        SaveProperties();
+        //    }
+        //}
 
         public String SomeName
         {

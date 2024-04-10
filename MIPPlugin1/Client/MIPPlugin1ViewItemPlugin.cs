@@ -59,7 +59,7 @@ namespace MIPPlugin1.Client
         /// </summary>
         public override string Name
         {
-            get { return "SprinxTab"; }
+            get { return "MyViewItem"; }
         }
 
         /// <summary>
