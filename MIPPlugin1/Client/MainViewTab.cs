@@ -17,7 +17,7 @@ namespace MIPPlugin1.Client
         {
             _window = window;
 
-            Title = "SprinxTabTitle";
+            Title = "Sprinx";
         }
 
         public override void Activate()
@@ -31,9 +31,9 @@ namespace MIPPlugin1.Client
 
     }
 
-    internal class MainViewSprinxTab : WorkSpaceToolbarPlugin
+    internal class MainViewTab : WorkSpaceToolbarPlugin
     {
-        public MainViewSprinxTab()
+        public MainViewTab()
         {
         }
 
@@ -55,8 +55,8 @@ namespace MIPPlugin1.Client
             //    System.Windows.MessageBox.Show("Default GUID has not been replaced for MIPPlugin1WorkSpaceToolbarPluginId!");
             //}
 
-            WorkSpaceToolbarPlaceDefinition.WorkSpaceIds = new List<Guid>() { ClientControl.LiveBuildInWorkSpaceId, ClientControl.PlaybackBuildInWorkSpaceId, MIPPlugin1Definition.MIPPlugin1WorkSpacePluginId };
-            WorkSpaceToolbarPlaceDefinition.WorkSpaceStates = new List<WorkSpaceState>() { WorkSpaceState.Normal };
+            //WorkSpaceToolbarPlaceDefinition.WorkSpaceIds = new List<Guid>() { ClientControl.LiveBuildInWorkSpaceId, ClientControl.PlaybackBuildInWorkSpaceId, MIPPlugin1Definition.MIPPlugin1WorkSpacePluginId };
+            //WorkSpaceToolbarPlaceDefinition.WorkSpaceStates = new List<WorkSpaceState>() { WorkSpaceState.Normal };
         }
 
         public override void Close()

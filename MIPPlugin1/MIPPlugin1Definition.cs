@@ -107,10 +107,10 @@ namespace MIPPlugin1
             {
                 _workSpacePlugins.Add(new MainViewPlugin()); //Sprinx Main view
                 //_sidePanelPlugins.Add(new MIPPlugin1SidePanelPlugin());
-                _viewItemPlugins.Add(new MIPPlugin1ViewItemPlugin());
+                _viewItemPlugins.Add(new MIPPlugin1WebViewItemPlugin());
                 //_viewItemPlugins.Add(new MIPPlugin1WorkSpaceViewItemPlugin());
                 //_viewItemToolbarPlugins.Add(new MIPPlugin1ViewItemToolbarPlugin());
-                _workSpaceToolbarPlugins.Add(new MainViewSprinxTab()); //SprinxTabTitle
+                _workSpaceToolbarPlugins.Add(new MainViewTab()); //SprinxTabTitle
                 //_settingsPanelPlugins.Add(new MIPPlugin1SettingsPanelPlugin());
             }
             if (EnvironmentManager.Instance.EnvironmentType == EnvironmentType.Administration)

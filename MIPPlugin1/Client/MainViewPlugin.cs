@@ -53,14 +53,8 @@ namespace MIPPlugin1.Client
             ViewAndLayoutItem.Layout = rectangles.ToArray();
             ViewAndLayoutItem.Name = Name;
 
-            var myCustomViewItemPlugin = new MIPPlugin1ViewItemPlugin();
-            ViewAndLayoutItem.InsertViewItemPlugin(0, myCustomViewItemPlugin, new Dictionary<string, string>());
-
-            //Dictionary<String, String> properties2 = new Dictionary<string, string>();
-            //properties2.Add("URL", "https://dragon.sprinx.ai");
-            //properties2.Add("Addscript", "true");
-            //properties2.Add("HideNavigationBar", "false");
-            //ViewAndLayoutItem.InsertBuiltinViewItem(0, ViewAndLayoutItem.HTMLBuiltinId, properties2);
+            var webViewItemPlugin = new MIPPlugin1WebViewItemPlugin();
+            ViewAndLayoutItem.InsertViewItemPlugin(0, webViewItemPlugin, new Dictionary<string, string>());
         }
 
         /// <summary>
@@ -145,29 +139,6 @@ namespace MIPPlugin1.Client
             {
                 _workSpaceViewSelected = false;
             }
-            return null;
-        }
-
-        /// <summary>
-        /// A simple loop to find any camera - replace with something usefull...
-        /// </summary>
-        /// <param name="top"></param>
-        /// <returns></returns>
-        private Item FindAnyCamera(List<Item> top)
-        {
-            if (top != null)
-                foreach (Item item in top)
-                {
-                    if (item.FQID.FolderType == FolderType.No && item.FQID.Kind == Kind.Camera)
-                        return item;
-
-                    if (item.FQID.FolderType != FolderType.No)
-                    {
-                        Item check = FindAnyCamera(item.GetChildren());
-                        if (check != null)
-                            return check;
-                    }
-                }
             return null;
         }
     }

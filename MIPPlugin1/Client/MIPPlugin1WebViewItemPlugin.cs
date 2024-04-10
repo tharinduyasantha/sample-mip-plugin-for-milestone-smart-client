@@ -17,10 +17,10 @@ namespace MIPPlugin1.Client
     /// then multiple ViewItemUserControl's may be requested via the same ViewItemManager.<br/>
     /// The properties part of the class is used to build the tree node in the Smart Client.
     /// </summary>
-    public class MIPPlugin1ViewItemPlugin : ViewItemPlugin
+    public class MIPPlugin1WebViewItemPlugin : ViewItemPlugin
     {
 
-        public MIPPlugin1ViewItemPlugin()
+        public MIPPlugin1WebViewItemPlugin()
         {
         }
 
@@ -59,7 +59,7 @@ namespace MIPPlugin1.Client
         /// </summary>
         public override string Name
         {
-            get { return "MyViewItem"; }
+            get { return "WebViewPlugin"; }
         }
 
         /// <summary>
