@@ -1,4 +1,5 @@
 using Microsoft.Web.WebView2.Core;
+using MIPPlugin1.Client.Services;
 using System;
 using System.Windows;
 using System.Windows.Input;
@@ -40,6 +41,7 @@ namespace MIPPlugin1.Client
         {
             _viewItemManager = viewItemManager;
 
+
             InitializeComponent();
 
             SetHeaderColors();
@@ -59,8 +61,32 @@ namespace MIPPlugin1.Client
                 await webView.EnsureCoreWebView2Async();
             }
 
-            // Now you can subscribe to the WebMessageReceived event or any other event
-            webView.CoreWebView2.WebMessageReceived += UpdateTextFromReactApp;
+            // Set the navigation completed event handler
+            webView.CoreWebView2.NavigationCompleted += CoreWebView2_NavigationCompleted;
+
+            // Navigate to your React application
+            webView.CoreWebView2.Navigate("http://localhost:3000");
+        }
+
+        private async void CoreWebView2_NavigationCompleted(object sender, Microsoft.Web.WebView2.Core.CoreWebView2NavigationCompletedEventArgs e)
+        {
+            if (e.IsSuccess)
+            {
+                var loginSettings = VideoOS.Platform.Login.LoginSettings.GetLoginSettings(EnvironmentManager.Instance.MasterSite.ServerId);
+                var idpToken = loginSettings.IdentityTokenCache.Token;
+                var tokenService = new TokenService("my-32-character-ultra-secure-and-ultra-long-secret");
+                var newToken = tokenService.RegenerateToken(idpToken);
+
+                string script = 
+                    $@"setTimeout(() => {{window.postMessage({{ 'type': 'AUTH_TOKEN', 'token': '{newToken}' }}, 'http://localhost:3000');}}, 500);";
+
+                await webView.CoreWebView2.ExecuteScriptAsync(script);
+
+            }
+            else
+            {
+                Console.Error.WriteLine("Navigation to the WebView app failed.");
+            }
         }
 
         private static Color GetWindowsMediaColor(System.Drawing.Color inColor)
@@ -74,7 +100,7 @@ namespace MIPPlugin1.Client
             if (!String.IsNullOrEmpty(message))
             {
 
-                ReactMessage.Text = message;
+                //ReactMessage.Text = message;
             }
         }
         private void OnWpfButtonClickAsync(object sender, RoutedEventArgs e)
@@ -227,7 +253,7 @@ namespace MIPPlugin1.Client
             }
         }
 
-        
+
 
         #endregion
     }

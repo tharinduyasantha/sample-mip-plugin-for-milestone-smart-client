@@ -47,7 +47,6 @@ namespace MIPPlugin1.Client
         public override void Init()
         {
             LoadProperties(true);
-
             List<Rectangle> rectangles = new List<Rectangle>();
             rectangles.Add(new Rectangle(000, 000, 1000, 800));
             ViewAndLayoutItem.Layout = rectangles.ToArray();

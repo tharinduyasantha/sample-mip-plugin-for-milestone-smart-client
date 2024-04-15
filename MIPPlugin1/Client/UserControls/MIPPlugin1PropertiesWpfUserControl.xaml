@@ -8,8 +8,8 @@
              mc:Ignorable="d" 
              Height="71" Width="267">
     <Grid>
-        <Label x:Name="label" Content="Select an ID:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
-        <ComboBox x:Name="comboBoxID" HorizontalAlignment="Left" Margin="10,36,0,0" VerticalAlignment="Top" Width="162" SelectionChanged="comboBoxID_SelectionChanged"/>
+        <!--<Label x:Name="label" Content="Select an ID:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+        <ComboBox x:Name="comboBoxID" HorizontalAlignment="Left" Margin="10,36,0,0" VerticalAlignment="Top" Width="162" SelectionChanged="comboBoxID_SelectionChanged"/>-->
 
     </Grid>
 </platformclient:PropertiesWpfUserControl>

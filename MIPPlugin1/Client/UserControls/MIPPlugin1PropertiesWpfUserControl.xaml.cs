@@ -68,22 +68,22 @@ namespace MIPPlugin1.Client
         /// </summary>
         /// <param name="config"></param>
         /// <param name="selectedId"></param>
-        internal void FillContent(List<Item> config, Guid selectedId)
-        {
-            comboBoxID.Items.Clear();
-            ComboBoxNode selectedComboBoxNode = null;
+        //internal void FillContent(List<Item> config, Guid selectedId)
+        //{
+        //    comboBoxID.Items.Clear();
+        //    ComboBoxNode selectedComboBoxNode = null;
 
-            foreach (Item item in config)
-            {
-                ComboBoxNode comboBoxNode = new ComboBoxNode(item);
-                comboBoxID.Items.Add(comboBoxNode);
-                if (comboBoxNode.Item.FQID.ObjectId == selectedId)
-                    selectedComboBoxNode = comboBoxNode;
-            }
+        //    foreach (Item item in config)
+        //    {
+        //        ComboBoxNode comboBoxNode = new ComboBoxNode(item);
+        //        comboBoxID.Items.Add(comboBoxNode);
+        //        if (comboBoxNode.Item.FQID.ObjectId == selectedId)
+        //            selectedComboBoxNode = comboBoxNode;
+        //    }
 
-            if (selectedComboBoxNode != null)
-                comboBoxID.SelectedItem = selectedComboBoxNode;
-        }
+        //    if (selectedComboBoxNode != null)
+        //        comboBoxID.SelectedItem = selectedComboBoxNode;
+        //}
 
         #endregion
 

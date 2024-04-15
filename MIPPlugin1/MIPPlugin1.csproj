@@ -39,6 +39,9 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt">
+      <Version>7.5.1</Version>
+    </PackageReference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
     <Reference Include="System" />
@@ -97,6 +100,7 @@
       <DependentUpon>MIPPlugin1UserControl.cs</DependentUpon>
     </Compile>
     <Compile Include="Background\MIPPlugin1BackgroundPlugin.cs" />
+    <Compile Include="Client\Services\TokenService.cs" />
     <Compile Include="Client\UserControls\MIPPlugin1PropertiesWpfUserControl.xaml.cs">
       <DependentUpon>MIPPlugin1PropertiesWpfUserControl.xaml</DependentUpon>
     </Compile>
