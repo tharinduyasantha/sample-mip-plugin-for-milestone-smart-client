@@ -1,4 +1,4 @@
-<platformclient:SidePanelWpfUserControl x:Class="MIPPlugin1.Client.MIPPlugin1SidePanelWpfUserControl"
+<platformclient:SidePanelWpfUserControl x:Class="MIPPlugin1.Client.MIPPlugin1SidePanelResizeUserControl"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -8,7 +8,7 @@
              mc:Ignorable="d" 
              Height="78" Width="248">
     <Grid>
-        <!--<Button x:Name="buttonMax" Content="Maximize ViewItem" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="auto" Click="buttonMax_Click"/>
-        <Button x:Name="buttonMin" Content="Restore ViewItem" HorizontalAlignment="Left" Margin="10,35,0,0" VerticalAlignment="Top" Width="auto" Click="buttonMin_Click"/>-->
+        <Button x:Name="buttonMax" Content="Maximize ViewItem" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="auto" Click="buttonMax_Click"/>
+        <Button x:Name="buttonMin" Content="Restore ViewItem" HorizontalAlignment="Left" Margin="10,35,0,0" VerticalAlignment="Top" Width="auto" Click="buttonMin_Click"/>
     </Grid>
 </platformclient:SidePanelWpfUserControl>

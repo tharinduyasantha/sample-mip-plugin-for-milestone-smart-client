@@ -8,8 +8,5 @@
                                        mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300" ClickEvent="ViewItemWpfUserControl_ClickEvent" DoubleClickEvent="ViewItemWpfUserControl_DoubleClickEvent">
     <Grid>
-        <!-- In your XAML file -->
-        <!--<wpf:WebView2 x:Name="webView" Source="https://www.facebook.com" />-->
-
     </Grid>
 </platformclient:ViewItemWpfUserControl>

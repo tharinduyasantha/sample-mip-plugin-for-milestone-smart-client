@@ -49,7 +49,7 @@ namespace MIPPlugin1.Client
         /// <returns></returns>
         public override SidePanelWpfUserControl GenerateWpfUserControl()
         {
-            return new MIPPlugin1SidePanelWpfUserControl();
+            return new MIPPlugin1SidePanelResizeUserControl();
         }
 
         /// <summary>

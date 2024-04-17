@@ -5,9 +5,9 @@ using VideoOS.Platform.Messaging;
 
 namespace MIPPlugin1.Client
 {
-    public partial class MIPPlugin1SidePanelWpfUserControl : SidePanelWpfUserControl
+    public partial class MIPPlugin1SidePanelResizeUserControl : SidePanelWpfUserControl
     {
-        public MIPPlugin1SidePanelWpfUserControl()
+        public MIPPlugin1SidePanelResizeUserControl()
         {
             InitializeComponent();
         }

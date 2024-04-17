@@ -29,6 +29,23 @@ namespace MIPPlugin1.Client
 
         private MIPPlugin1ViewItemManager _viewItemManager;
         private object _themeChangedReceiver;
+        private string _webViewUrl = "http://localhost:3000/";
+
+        public string WebViewUrl
+        {
+            get { return _webViewUrl; }
+            set
+            {
+                if (_webViewUrl != value)
+                {
+                    _webViewUrl = value;
+                    if (webView?.CoreWebView2 != null)
+                    {
+                        webView.CoreWebView2.Navigate(_webViewUrl);
+                    }
+                }
+            }
+        }
 
         #endregion
 
@@ -43,8 +60,9 @@ namespace MIPPlugin1.Client
 
 
             InitializeComponent();
+            this.DataContext = this;
 
-            SetHeaderColors();
+            //SetHeaderColors();
             InitializeWebView();
         }
 
@@ -57,16 +75,12 @@ namespace MIPPlugin1.Client
         {
             if (webView.CoreWebView2 == null)
             {
-                // Initialize CoreWebView2 for the WebView2 control
                 await webView.EnsureCoreWebView2Async();
+                webView.CoreWebView2.NavigationCompleted += CoreWebView2_NavigationCompleted;
+                webView.CoreWebView2.Navigate(_webViewUrl);
             }
-
-            // Set the navigation completed event handler
-            webView.CoreWebView2.NavigationCompleted += CoreWebView2_NavigationCompleted;
-
-            // Navigate to your React application
-            webView.CoreWebView2.Navigate("http://localhost:3000");
         }
+
 
         private async void CoreWebView2_NavigationCompleted(object sender, Microsoft.Web.WebView2.Core.CoreWebView2NavigationCompletedEventArgs e)
         {

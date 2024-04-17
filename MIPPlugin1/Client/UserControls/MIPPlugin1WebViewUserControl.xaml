@@ -10,7 +10,7 @@
     <Grid>
         <wpf:WebView2
 x:Name="webView"
-Source="http://localhost:3000/" Margin="10,10,10,10"/>
+Source="{Binding WebViewUrl}" Margin="10,10,10,10"/>
         <!--<Grid.ColumnDefinitions>
             <ColumnDefinition Width="Auto" />
             --><!-- Column for Button and TextBlock --><!--
