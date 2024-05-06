@@ -1,5 +1,8 @@
+using Microsoft.IdentityModel.Tokens;
+
 using System;
 using System.Collections.Generic;
+using System.Windows.Markup;
 using System.Xml;
 using VideoOS.Platform;
 using VideoOS.Platform.Client;
@@ -18,8 +21,36 @@ namespace MIPPlugin1.Client
         private string _someName;
         private List<Item> _configItems;
 
+        internal const string WorkspacePropertyKey = "MyProp";
+        private string _gloProp;
+        private string _priProp;
+
         public MIPPlugin1ViewItemManager() : base("MIPPlugin1ViewItemManager")
         {
+        }
+
+        public string MyPropValue
+        {
+            set { SetProperty(WorkspacePropertyKey, value ?? ""); SaveProperties(); }
+            get { return GetProperty(WorkspacePropertyKey); }
+        }
+
+        public string MyPropShareGlobal
+        {
+            set
+            {
+                _gloProp = value ?? "";
+                // SaveOptionsConfiguration - Global
+                VideoOS.Platform.Configuration.Instance.SaveOptionsConfiguration(
+                    MIPPlugin1.MIPPlugin1Definition.MyPropertyId, false, Utility.ToXml("SharedProperty", _gloProp));
+                MIPPlugin1Definition.OnSharedPropertyChange(this, EventArgs.Empty);
+            }
+            get
+            {
+                System.Xml.XmlNode result = VideoOS.Platform.Configuration.Instance.GetOptionsConfiguration(MIPPlugin1Definition.MyPropertyId, false);
+                _gloProp = Utility.GetInnerText(result, "Empty");
+                return _gloProp;
+            }
         }
 
         #region Methods overridden 

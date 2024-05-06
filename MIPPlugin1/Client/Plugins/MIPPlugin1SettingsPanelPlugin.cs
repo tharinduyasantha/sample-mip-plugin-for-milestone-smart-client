@@ -1,12 +1,13 @@
 using System;
 using System.Windows.Controls;
+using System.Windows.Markup;
 using VideoOS.Platform.Client;
 
 namespace MIPPlugin1.Client
 {
     public class MIPPlugin1SettingsPanelPlugin : SettingsPanelPlugin
     {
-        private UserControl _userControl;
+        private MIPPlugin1SettingsPanelControl _myUserControl;
 
         /// <summary>
         /// Should return unique id identifying this plug-in.
@@ -19,13 +20,16 @@ namespace MIPPlugin1.Client
         /// <summary>
         /// Should return the title of this plug-in. It will be displayed in the Settings panel navigation list.
         /// </summary>
-        public override string Title { get { return "SprinxTab"; } }
+        public override string Title { get { return "Properties"; } }
 
         /// <summary>
         /// This method is called just before the Settings panel is closed.
         /// </summary>
         public override void Close()
-        { }
+        {
+            if (_myUserControl != null)
+                _myUserControl = null;
+        }
 
         /// <summary>
         /// Should close the user control and clean up any resources or event registrations. <br>
@@ -33,7 +37,7 @@ namespace MIPPlugin1.Client
         /// </summary>
         public override void CloseUserControl()
         {
-            _userControl = null;
+            _myUserControl = null;
         }
 
         /// <summary>
@@ -41,8 +45,20 @@ namespace MIPPlugin1.Client
         /// </summary>
         public override UserControl GenerateUserControl()
         {
-            _userControl = new MIPPlugin1SettingsPanelControl(this);
-            return _userControl;
+            // Get hold of the default set of properties for this plugin (Saved under Id='PropertyDefinition.PropertyOptionsDialog')
+            LoadProperties(true);
+            _myUserControl = new MIPPlugin1SettingsPanelControl() { MyPropValue = GetProperty("MyProp") };
+
+            // The following lines show how to access other set of properties, saved under id='PropertyDefinition.MyPropertyId'
+
+            // GetOptionsConfiguration - Global
+            System.Xml.XmlNode result = VideoOS.Platform.Configuration.Instance.GetOptionsConfiguration(MIPPlugin1Definition.MyPropertyId, false);
+            _myUserControl.MyPropSharedGlobal = Utility.GetInnerText(result, "Empty");
+
+            // GetOptionsConfiguration - Private
+            result = VideoOS.Platform.Configuration.Instance.GetOptionsConfiguration(MIPPlugin1Definition.MyPropertyId, true);
+            _myUserControl.MyPropSharedPrivate = Utility.GetInnerText(result, "Empty");
+            return _myUserControl; ;
         }
 
         /// <summary>
@@ -51,7 +67,7 @@ namespace MIPPlugin1.Client
         /// </summary>
         public override void Init()
         {
-            LoadProperties(false);
+            
         }
 
         /// <summary>

@@ -41,6 +41,7 @@ namespace MIPPlugin1
         internal static Guid MIPPlugin1WorkSpaceToolbarPluginId = new Guid("22222222-2222-2222-2222-222222222222");
         internal static Guid MIPPlugin1ViewItemToolbarPluginId = new Guid("33333333-3333-3333-3333-333333333333");
         internal static Guid MIPPlugin1ToolsOptionDialogPluginId = new Guid("44444444-4444-4444-4444-444444444444");
+        internal static Guid MyPropertyId = new Guid("C1D40125-1B1C-448E-8C5B-484C279154CC");
 
         #region Private fields
 
@@ -95,14 +96,14 @@ namespace MIPPlugin1
         public override void Init()
         {
             // Populate all relevant lists with your plugins etc.
-            _itemNodes.Add(new ItemNode(MIPPlugin1Kind, Guid.Empty,
-                                         "MIPPlugin1", _treeNodeImage,
-                                         "MIPPlugin1s", _treeNodeImage,
-                                         Category.Text, true,
-                                         ItemsAllowed.Many,
-                                         new MIPPlugin1ItemManager(MIPPlugin1Kind),
-                                         null
-                                         ));
+            //_itemNodes.Add(new ItemNode(MIPPlugin1Kind, Guid.Empty,
+            //                             "MIPPlugin1", _treeNodeImage,
+            //                             "MIPPlugin1s", _treeNodeImage,
+            //                             Category.Text, true,
+            //                             ItemsAllowed.Many,
+            //                             new MIPPlugin1ItemManager(MIPPlugin1Kind),
+            //                             null
+            //                             ));
             if (EnvironmentManager.Instance.EnvironmentType == EnvironmentType.SmartClient)
             {
                 _workSpacePlugins.Add(new MainViewPlugin()); //Sprinx Main view
@@ -113,12 +114,13 @@ namespace MIPPlugin1
                 _workSpaceToolbarPlugins.Add(new MainViewTab()); //SprinxTabTitle
                 //_settingsPanelPlugins.Add(new MIPPlugin1SettingsPanelPlugin());
             }
-            if (EnvironmentManager.Instance.EnvironmentType == EnvironmentType.Administration)
-            {
-                _tabPlugins.Add(new MIPPlugin1TabPlugin());
-                _toolsOptionsDialogPlugins.Add(new MIPPlugin1ToolsOptionDialogPlugin());
-            }
+            //if (EnvironmentManager.Instance.EnvironmentType == EnvironmentType.Administration)
+            //{
+            //    _tabPlugins.Add(new MIPPlugin1TabPlugin());
 
+            //}
+            _settingsPanelPlugins.Add(new MIPPlugin1SettingsPanelPlugin());
+            _toolsOptionsDialogPlugins.Add(new MIPPlugin1ToolsOptionDialogPlugin());
             _backgroundPlugins.Add(new MIPPlugin1BackgroundPlugin());
         }
 
@@ -266,8 +268,7 @@ namespace MIPPlugin1
         /// </summary>
         public override UserControl GenerateUserControl()
         {
-            _treeNodeInofUserControl = new HelpPage();
-            return _treeNodeInofUserControl;
+            return null;
         }
 
         /// <summary>
@@ -345,6 +346,15 @@ namespace MIPPlugin1
         /// <summary>
         /// Create and returns the background task.
         /// </summary>
+        /// 
+        public static event EventHandler SharedPropertyChanged;
+        public static void OnSharedPropertyChange(object sender, EventArgs e)
+        {
+            if (SharedPropertyChanged != null)
+            {
+                SharedPropertyChanged.Invoke(sender, e);
+            }
+        }
         public override List<BackgroundPlugin> BackgroundPlugins
         {
             get { return _backgroundPlugins; }

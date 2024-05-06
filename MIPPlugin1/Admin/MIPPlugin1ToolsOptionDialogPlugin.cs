@@ -4,19 +4,14 @@ using VideoOS.Platform.Admin;
 
 namespace MIPPlugin1.Admin
 {
-    public class MIPPlugin1ToolsOptionDialogPlugin : ToolsOptionsDialogPlugin
+    public class MIPPlugin1ToolsOptionDialogPlugin : VideoOS.Platform.Admin.ToolsOptionsDialogPlugin
     {
         private MIPPlugin1ToolsOptionDialogUserControl _myUserControl;
-        private Guid _myPropertyId = new Guid("D8979A59-D40D-4CEC-98FF-3BD06EE17B05");
 
         public override void Init()
         {
             // TODO: remove below check once MIPPlugin1Definition.MIPPlugin1ToolsOptionDialogPluginId has been replaced with proper GUID
-            if (Id == new Guid("44444444-4444-4444-4444-444444444444"))
-            {
-                System.Windows.MessageBox.Show("Default GUID has not been replaced for MIPPlugin1ToolsOptionDialogPluginId!");
-            }
-
+            
             //Note: Do not try to get option settings here!
         }
 
@@ -32,13 +27,16 @@ namespace MIPPlugin1.Admin
         public override bool SaveChanges()
         {
             if (_myUserControl == null) return true;
-            VideoOS.Platform.Configuration.Instance.SaveOptionsConfiguration(_myPropertyId, true, ToXml("ToolsOption", _myUserControl.MyPropValue));
+            VideoOS.Platform.Configuration.Instance.SaveOptionsConfiguration(
+                MIPPlugin1.MIPPlugin1Definition.MyPropertyId,
+                true,
+                Utility.ToXml("ToolOptions", _myUserControl.MyPropValue));
             return true;
         }
 
         public override string Name
         {
-            get { return "MIPPlugin1"; }
+            get { return "Sprinx Properties"; }
         }
 
         public override Guid Id
@@ -50,7 +48,7 @@ namespace MIPPlugin1.Admin
         public override ToolsOptionsDialogUserControl GenerateUserControl()
         {
             _myUserControl = new MIPPlugin1ToolsOptionDialogUserControl();
-            System.Xml.XmlNode result = VideoOS.Platform.Configuration.Instance.GetOptionsConfiguration(_myPropertyId, true);
+            System.Xml.XmlNode result = VideoOS.Platform.Configuration.Instance.GetOptionsConfiguration(MIPPlugin1Definition.MyPropertyId, true);
             _myUserControl.MyPropValue = GetInnerText(result, "Empty");
             return _myUserControl;
         }

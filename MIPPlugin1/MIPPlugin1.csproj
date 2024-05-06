@@ -66,38 +66,12 @@
     <PackageReference Include="MilestoneSystems.VideoOS.Platform" Version="*" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Admin\MIPPlugin1AddUserControl.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Admin\MIPPlugin1AddUserControl.Designer.cs">
-      <DependentUpon>MIPPlugin1AddUserControl.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Admin\MIPPlugin1HelpPage.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Admin\MIPPlugin1HelpPage.Designer.cs">
-      <DependentUpon>MIPPlugin1HelpPage.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Admin\MIPPlugin1ItemManager.cs" />
-    <Compile Include="Admin\MIPPlugin1TabPlugin.cs" />
-    <Compile Include="Admin\MIPPlugin1TabUserControl.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Admin\MIPPlugin1TabUserControl.Designer.cs">
-      <DependentUpon>MIPPlugin1TabUserControl.cs</DependentUpon>
-    </Compile>
     <Compile Include="Admin\MIPPlugin1ToolsOptionDialogPlugin.cs" />
     <Compile Include="Admin\MIPPlugin1ToolsOptionDialogUserControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Admin\MIPPlugin1ToolsOptionDialogUserControl.designer.cs">
       <DependentUpon>MIPPlugin1ToolsOptionDialogUserControl.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Admin\MIPPlugin1UserControl.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Admin\MIPPlugin1UserControl.Designer.cs">
-      <DependentUpon>MIPPlugin1UserControl.cs</DependentUpon>
     </Compile>
     <Compile Include="Background\MIPPlugin1BackgroundPlugin.cs" />
     <Compile Include="Client\Services\TokenService.cs" />
@@ -133,28 +107,15 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="MIPPlugin1Definition.cs" />
+    <Compile Include="Utility.cs" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Admin\MIPPlugin1AddUserControl.resx">
-      <DependentUpon>MIPPlugin1AddUserControl.cs</DependentUpon>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Admin\MIPPlugin1TabUserControl.resx">
-      <DependentUpon>MIPPlugin1TabUserControl.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Admin\MIPPlugin1ToolsOptionDialogUserControl.resx">
       <DependentUpon>MIPPlugin1ToolsOptionDialogUserControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Resources\Server.png" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Admin\MIPPlugin1HelpPage.resx">
-      <DependentUpon>MIPPlugin1HelpPage.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Admin\MIPPlugin1UserControl.resx">
-      <DependentUpon>MIPPlugin1UserControl.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

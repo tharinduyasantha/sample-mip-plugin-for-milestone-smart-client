@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Threading;
+using System.Windows.Markup;
 using System.Xml;
 using VideoOS.Platform;
 using VideoOS.Platform.Background;
@@ -49,10 +50,9 @@ namespace MIPPlugin1.Background
         /// </summary>
         public override void Init()
         {
-            _stop = false;
-            _thread = new Thread(new ThreadStart(Run));
-            _thread.Name = "MIPPlugin1 Background Thread";
-            _thread.Start();
+            System.Xml.XmlNode result = VideoOS.Platform.Configuration.Instance.GetOptionsConfiguration(MIPPlugin1Definition.MyPropertyId, false);
+            string myPropValue = Utility.GetInnerText(result, "not defined");
+            EnvironmentManager.Instance.Log(false, "Property read", "Value (global): " + myPropValue, null);
 
         }
 
@@ -71,7 +71,7 @@ namespace MIPPlugin1.Background
         /// </summary>
         public override List<EnvironmentType> TargetEnvironments
         {
-            get { return new List<EnvironmentType>() { EnvironmentType.Service }; } // Default will run in the Event Server
+            get { return new List<EnvironmentType>() { EnvironmentType.Service, EnvironmentType.Administration, EnvironmentType.SmartClient, EnvironmentType.Standalone }; } // Default will run in the Event Server
         }
 
 

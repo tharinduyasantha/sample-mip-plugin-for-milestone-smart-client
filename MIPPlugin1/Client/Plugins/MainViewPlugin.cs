@@ -46,14 +46,22 @@ namespace MIPPlugin1.Client
         /// </summary>
         public override void Init()
         {
-            LoadProperties(true);
+            //LoadProperties(true);
+            //add message listeners
+            _messageRegistrationObjects.Add(EnvironmentManager.Instance.RegisterReceiver(ShownWorkSpaceChangedReceiver, new MessageIdFilter(MessageId.SmartClient.ShownWorkSpaceChangedIndication)));
+            _messageRegistrationObjects.Add(EnvironmentManager.Instance.RegisterReceiver(WorkSpaceStateChangedReceiver, new MessageIdFilter(MessageId.SmartClient.WorkSpaceStateChangedIndication)));
+            _messageRegistrationObjects.Add(EnvironmentManager.Instance.RegisterReceiver(SelectedViewChangedReceiver, new MessageIdFilter(MessageId.SmartClient.SelectedViewChangedIndication)));
+            
             List<Rectangle> rectangles = new List<Rectangle>();
             rectangles.Add(new Rectangle(000, 000, 1000, 800));
             ViewAndLayoutItem.Layout = rectangles.ToArray();
             ViewAndLayoutItem.Name = Name;
 
+            Dictionary<String, String> customProperties = new Dictionary<string, string>();
+            customProperties.Add("MyPropertyPPV", "propValue");
+
             var webViewItemPlugin = new MIPPlugin1WebViewItemPlugin();
-            ViewAndLayoutItem.InsertViewItemPlugin(0, webViewItemPlugin, new Dictionary<string, string>());
+            ViewAndLayoutItem.InsertViewItemPlugin(0, webViewItemPlugin, customProperties);
         }
 
         /// <summary>

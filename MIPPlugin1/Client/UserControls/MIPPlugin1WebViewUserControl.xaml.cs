@@ -3,6 +3,7 @@ using MIPPlugin1.Client.Services;
 using System;
 using System.Windows;
 using System.Windows.Input;
+using System.Windows.Markup;
 using System.Windows.Media;
 using VideoOS.Platform;
 using VideoOS.Platform.Client;
@@ -61,9 +62,31 @@ namespace MIPPlugin1.Client
 
             InitializeComponent();
             this.DataContext = this;
+        }
 
-            //SetHeaderColors();
+        public override void Init()
+        {
+            if (_viewItemManager.MyPropValue != null)
+            {
+                _webViewUrl = _viewItemManager.MyPropValue;
+            }
+            _webViewUrl = _viewItemManager.MyPropShareGlobal;
             InitializeWebView();
+            MIPPlugin1Definition.SharedPropertyChanged += PropertyDefinition_SharedPropertyChanged;
+        }
+
+        public override void Close()
+        {
+            MIPPlugin1Definition.SharedPropertyChanged -= PropertyDefinition_SharedPropertyChanged;
+            //_webViewUrl = _viewItemManager.MyPropValue;
+
+        }
+
+
+        private void PropertyDefinition_SharedPropertyChanged(object sender, System.EventArgs e)
+        {
+            _webViewUrl = _viewItemManager.MyPropShareGlobal;
+            
         }
 
         private void InitializeWebView()
@@ -150,21 +173,21 @@ namespace MIPPlugin1.Client
         /// <summary>
         /// Method that is called immediately after the view item is displayed.
         /// </summary>
-        public override void Init()
-        {
-            SetUpApplicationEventListeners();
-            //_nameTextBlock.Text = _viewItemManager.SomeName;
-        }
+        //public override void Init()
+        //{
+        //    SetUpApplicationEventListeners();
+        //    //_nameTextBlock.Text = _viewItemManager.SomeName;
+        //}
 
         /// <summary>
         /// Method that is called when the view item is closed. The view item should free all resources when the method is called.
         /// Is called when userControl is not displayed anymore. Either because of 
         /// user clicking on another View or Item has been removed from View.
         /// </summary>
-        public override void Close()
-        {
-            RemoveApplicationEventListeners();
-        }
+        //public override void Close()
+        //{
+        //    RemoveApplicationEventListeners();
+        //}
 
         #endregion
 

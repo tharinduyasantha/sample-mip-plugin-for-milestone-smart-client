@@ -5,25 +5,29 @@ namespace MIPPlugin1.Client
 {
     public partial class MIPPlugin1SettingsPanelControl : UserControl
     {
-        private readonly MIPPlugin1SettingsPanelPlugin _plugin;
-        private const string _propertyId = "aSettingId";
-        public MIPPlugin1SettingsPanelControl(MIPPlugin1SettingsPanelPlugin plugin)
+        public MIPPlugin1SettingsPanelControl()
         {
-            _plugin = plugin;
-
             InitializeComponent();
-
-            _aSettingTextBox.Text = _plugin.GetProperty(_propertyId);
         }
 
-        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        
+        /// <summary>
+        /// Get and set the property value - controlled from the SettingsPanelPlugin class
+        /// </summary>
+        public string MyPropValue
         {
-            _plugin.SetProperty(_propertyId, _aSettingTextBox.Text);
-            string errorMessage;
-            if (!_plugin.TrySaveChanges(out errorMessage))
-            {
-                MessageBox.Show(errorMessage);
-            }
+            set { textBoxPropValue.Text = value ?? ""; }
+            get { return textBoxPropValue.Text; }
+        }
+        public string MyPropSharedGlobal
+        {
+            set { textBoxSharedGlobal.Text = value ?? ""; }
+            get { return textBoxSharedGlobal.Text; }
+        }
+        public string MyPropSharedPrivate
+        {
+            set { textBoxSharedUser.Text = value ?? ""; }
+            get { return textBoxSharedUser.Text; }
         }
     }
 }

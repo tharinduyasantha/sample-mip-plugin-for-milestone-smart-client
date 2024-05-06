@@ -54,7 +54,7 @@ namespace MIPPlugin1.Admin
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(112, 17);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Property to save";
+            this.label1.Text = "URL";
             // 
             // textBoxPropValue
             // 

@@ -1,4 +1,5 @@
 using System;
+using System.Reflection;
 using System.Windows.Forms;
 using System.Xml;
 using VideoOS.Platform.Client;
@@ -20,8 +21,12 @@ namespace MIPPlugin1.Client
     public class MIPPlugin1WebViewItemPlugin : ViewItemPlugin
     {
 
+        private static System.Drawing.Image _treeNodeImage;
         public MIPPlugin1WebViewItemPlugin()
         {
+            //Assembly assembly = Assembly.GetExecutingAssembly();
+            //string name = assembly.GetName().Name;
+            //_treeNodeImage = System.Drawing.Image.FromStream(assembly.GetManifestResourceStream(name + ".Resources.PropertyWorkSpace.bmp"));
         }
 
         /// <summary>
