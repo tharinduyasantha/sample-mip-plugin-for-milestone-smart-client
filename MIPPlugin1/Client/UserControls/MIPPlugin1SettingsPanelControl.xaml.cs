@@ -10,24 +10,19 @@ namespace MIPPlugin1.Client
             InitializeComponent();
         }
 
-        
+
         /// <summary>
         /// Get and set the property value - controlled from the SettingsPanelPlugin class
         /// </summary>
         public string MyPropValue
         {
-            set { textBoxPropValue.Text = value ?? ""; }
-            get { return textBoxPropValue.Text; }
+            get; set;
         }
         public string MyPropSharedGlobal
         {
             set { textBoxSharedGlobal.Text = value ?? ""; }
             get { return textBoxSharedGlobal.Text; }
         }
-        public string MyPropSharedPrivate
-        {
-            set { textBoxSharedUser.Text = value ?? ""; }
-            get { return textBoxSharedUser.Text; }
-        }
+
     }
 }

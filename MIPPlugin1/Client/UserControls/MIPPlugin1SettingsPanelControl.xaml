@@ -7,12 +7,12 @@
              mc:Ignorable="d">
     <Grid>
         <StackPanel>
-            <Label  Content="Property Settings Panel Value" />
-            <TextBox Name="textBoxPropValue"  Margin="5" MinWidth="250" HorizontalAlignment="Left" />
-            <Label Content="Shared Globally"/>
+            <Label  Content="Property Settings" />
+            <!--<TextBox Name="textBoxPropValue"  Margin="5" MinWidth="250" HorizontalAlignment="Left" />-->
+            <Label Content="URL"/>
             <TextBox x:Name="textBoxSharedGlobal" Margin="5" MinWidth="250" HorizontalAlignment="Left" />
-            <Label Content="Shared User-Private"/>
-            <TextBox x:Name="textBoxSharedUser" Margin="5" MinWidth="250" HorizontalAlignment="Left" />
+            <!--<Label Content="Shared User-Private"/>
+            <TextBox x:Name="textBoxSharedUser" Margin="5" MinWidth="250" HorizontalAlignment="Left" />-->
         </StackPanel>
     </Grid>
 </UserControl>

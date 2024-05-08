@@ -56,8 +56,8 @@ namespace MIPPlugin1.Client
             _myUserControl.MyPropSharedGlobal = Utility.GetInnerText(result, "Empty");
 
             // GetOptionsConfiguration - Private
-            result = VideoOS.Platform.Configuration.Instance.GetOptionsConfiguration(MIPPlugin1Definition.MyPropertyId, true);
-            _myUserControl.MyPropSharedPrivate = Utility.GetInnerText(result, "Empty");
+            //result = VideoOS.Platform.Configuration.Instance.GetOptionsConfiguration(MIPPlugin1Definition.MyPropertyId, true);
+            //_myUserControl.MyPropSharedPrivate = Utility.GetInnerText(result, "Empty");
             return _myUserControl; ;
         }
 

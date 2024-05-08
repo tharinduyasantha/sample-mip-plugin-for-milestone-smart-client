@@ -78,7 +78,7 @@ namespace MIPPlugin1.Client
         public override void Close()
         {
             MIPPlugin1Definition.SharedPropertyChanged -= PropertyDefinition_SharedPropertyChanged;
-            //_webViewUrl = _viewItemManager.MyPropValue;
+            _webViewUrl = _viewItemManager.MyPropValue;
 
         }
 
@@ -115,7 +115,7 @@ namespace MIPPlugin1.Client
                 var newToken = tokenService.RegenerateToken(idpToken);
 
                 string script = 
-                    $@"setTimeout(() => {{window.postMessage({{ 'type': 'AUTH_TOKEN', 'token': '{newToken}' }}, 'http://localhost:3000');}}, 500);";
+                    $@"setTimeout(() => {{window.postMessage({{ 'type': 'AUTH_TOKEN', 'token': '{newToken}' }}, '{_webViewUrl}');}}, 500);";
 
                 await webView.CoreWebView2.ExecuteScriptAsync(script);
 
